@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyWigs/Shop</title>
+    <link rel="stylesheet" href="/Shop-page/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="active visible">
+    <div class="container">
+        <!-- Navigation Section -->
+        <header>
+            <div class="nav-top">
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="search" name="search" id="search-input" placeholder="Search Product">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="offer">
+                    <span>Limited Offer!</span>
+                </div>
+            </div>
+
+            <div class="nav-bottom">
+                <a href="/HomePage/home.html" class="logo">JoyWigs.</a>
+                <ul class="nav-links">
+                    <li><a href="/HomePage/home.html">home</a></li>
+                    <li><a href="/Shop-page/shop.html">shop</a></li>
+                    <!-- <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contact</a></li> -->
+                </ul>
+
+                <div class="nav-icons">
+                    <i id="icons" class="far fa-user"></i>
+                    <div class="favourite">
+                        <i id="icons" class="far fa-heart"></i>
+                        <span>0</span>
+                    </div>
+                    <span class="cart">
+                        <svg class="cart-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                        </svg>
+                        <span>0</span>
+                    </span>
+                    <i id="menu-icon" class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- side bar -->
+            <div class="side-bar">
+                <div class="close-btn">
+                    <i class="fas fa-x"></i>
+                </div>
+                <ul class="menu-links">
+                    <li>
+                        <a href="/HomePage/home.html">home</a>
+                        <i class="fas fa-home"></i>
+                    </li>
+                    <li>
+                        <a href="/Shop-page/shop.html">shop</a>
+                        <i class="fas fa-shopping-cart"></i>
+                    </li>
+                    <li>
+                        <a href="/Shop-page/shop.html">Profile</a>
+                        <i class="fas fa-user"></i>
+                    </li>
+                    <li>
+                        <a href="#">Setting</a>
+                        <i class="fas fa-cog"></i>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!-- Cart-page Section -->
+        <div class="cart-page">
+            <div class="close-cart">
+                <button class="close-cart-btn">
+                    <i class="fas fa-x"></i>
+                </button>
+            </div>
+            <div class="cart-container">
+                <ul id="cart-items"></ul>
+            </div>
+            <div id="cart-total">---------  Total: $<span id="total">0</span>-----------</div>
+            <div class="cart-btns">
+                <button class="clear-cart-btn">clear cart</button>
+                <button class="cheackout-btn">checkout</button>
+            </div>
+        </div>
+
+        <!-- filter option -->
+        <div class="filter">
+            <div class="filter-title">
+                <img src="/images/sort.png" alt="" width="25">
+                <span>Sort by:</span>
+            </div>
+            
+            <div class="filter-opts">
+                <!-- filter all btn
+                <div class="filter-all-btn">
+                    <button>Show All</button>
+                </div> -->
+
+                <!-- filter by category -->
+                <select name="category" id="category">
+                    <option value="none">category</option>
+                    <option value="rasta">Rasta</option>
+                    <option value="knotless">Knotless</option>
+                    <option value="frontals">Frontals</option>
+                    <option value="human hair">Human Hair</option>
+                    <option value="">Curly</option>
+                    <option value="none">Afro</option>
+                    <option value="none">Dreads</option>
+                </select>
+
+                <!-- filter by price -->
+                <select name="price" id="price">
+                    <option value="none">price</option>
+                    <option value="low">0$ - $50</option>
+                    <option value="medium">50$ - $150</option>
+                    <option value="hight">$150+</option>
+                </select>
+
+                <!-- filter by length -->
+                <select name="length" id="length">
+                    <option value="none">length</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+
+                <!-- filter by rating -->
+                <select name="rating" id="rating">
+                    <option value="none">rating</option>
+                    <option value="9">9+ Stars</option>
+                    <option value="6">6+ Stars</option>
+                    <option value="3">3+ Stars</option>
+                    <option value="1">1+ Stars</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <!-- <h3 class="page-title">All Products</h3> -->
+        <div class="products">
+            <div class="product-list" id="product-list"></div>
+        </div>
+
+        <!-- pagination btns -->
+        <div class="pagination-container" id="pagination-container"></div>
+
+        <!-- newsletter section -->
+        <div class="newsletter">
+            <div class="newsletter-text">
+                <span>Subscribe to our</span>
+                <p>Newsletter</p>
+            </div>
+            <div class="newsletter-input">
+                <input type="email" name="email" id="newsletter-input" placeholder="Enter email address">
+                <button class="submit-email-btn" type="submit">submit</button>
+            </div>
+        </div>
+
+        <!-- footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>Useful link</h4>
+                        <ul>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="#">Hair Installation</a></li>
+                            <li><a href="#">Re-vamping</a></li>
+                            <li><a href="#">Make-up</a></li>
+                            <li><a href="#">Saloon</a></li>
+                            <li><a href="#">Manicure & Pedicure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>contact us</h4>
+                        <div class="contact-icons">
+                            <div class="icons">
+                                <i class="fas fa-phone"></i>
+                                <a href="#">+237 671 234 567</a>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="#">+237 671 234 567</a>
+                            </div>
+                            <div class="icons">
+                                <i class="fas fa-envelope"></i>
+                                <a href="#">email@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="follow-links">
+                <h4>Follow us</h4>
+                <div class="link-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="address">Behind UB Junction Molyko Buea</span>
+                </div>
+                <div class="rights">
+                    <span>&copy; All rights Reserved</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/products.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>

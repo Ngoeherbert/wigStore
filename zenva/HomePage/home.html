@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyWigs/Home</title>
+    <link rel="stylesheet" href="/HomePage/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script defer src="/slider.js"></script>
+</head>
+<body class="active visible">
+    <div class="container">
+
+        <!-- Navigation Section -->
+        <header>
+            <div class="nav-top">
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="search" name="search" id="search-input" placeholder="Search Product">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="offer">
+                    <span>Limited Offer!</span>
+                </div>
+            </div>
+
+            <div class="nav-bottom">
+                <a href="/HomePage/home.html" class="logo">JoyWigs.</a>
+                <ul class="nav-links">
+                    <li><a href="/HomePage/home.html">home</a></li>
+                    <li><a href="/Shop-page/shop.html">shop</a></li>
+                    <!-- <li><a href="/AboutPage/about.html">about</a></li>
+                    <li><a href="/ServicesPage/services.html">services</a></li>
+                    <li><a href="/ContactPage/contact.html">contact</a></li> -->
+                </ul>
+
+                <div class="nav-icons">
+                    <i id="icons" class="far fa-user"></i>
+                    <div class="favourite">
+                        <i id="icons" class="far fa-heart"></i>
+                        <span>0</span>
+                    </div>
+                    <span class="cart">
+                        <svg class="cart-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </span>
+                    <i id="menu-icon" class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- side bar -->
+            <div class="side-bar">
+                <div class="close-btn">
+                    <i class="fas fa-x"></i>
+                </div>
+                <ul class="menu-links">
+                    <li>
+                        <a href="/HomePage/home.html">home</a>
+                        <i class="fas fa-home"></i>
+                    </li>
+                    <li>
+                        <a href="/Shop-page/shop.html">shop</a>
+                        <i class="fas fa-shopping-cart"></i>
+                    </li>
+                    <li>
+                        <a href="/Shop-page/shop.html">Profile</a>
+                        <i class="fas fa-user"></i>
+                    </li>
+                    <li>
+                        <a href="#">Setting</a>
+                        <i class="fas fa-cog"></i>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!-- Slider-Hiro Section -->
+        <div class="slider-container">
+            <div class="slider-info-div">
+                <h2 id="slider-title"></h2>
+                <p id="slider-desc"></p>
+                <a href="/Shop-page/shop.html" id="shop-now">Shop Now</a>
+            </div>
+            <div class="sliderImgDiv">
+                <img id="slider-img" src="" alt="">
+            </div>
+            <div class="slider-controls">
+                <i id="prev" class="fas fa-angle-left"></i>
+                <i id="next" class="fas fa-angle-right"></i>
+            </div>
+        </div>
+
+
+        <!-- Best Section -->
+        <div class="best-sellers">
+            <h1>Best Sellers</h1>
+            <div class="best-sellers-list">
+                <div class="best-seller-list">
+                    <a href="#">
+                        <img src="/images/products/5.png" alt="">
+                        <div class="title">
+                            <span>Knotless</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="/images/products/2.png" alt="">
+                        <div class="title">
+                            <span>Knotless</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="/images/products/1.png" alt="">
+                        <div class="title">
+                            <span>Knotless</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="/images/products/4.png" alt="">
+                        <div class="title">
+                            <span>Knotless</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Cart-page Section -->
+        <div class="cart-page">
+            <div class="close-cart">
+                <button class="close-cart-btn">
+                    <i class="fas fa-x"></i>
+                </button>
+            </div>
+            <div class="cart-container">
+                <ul id="cart-items"></ul>
+            </div>
+            <div id="cart-total">---------  Total: $<span id="total">0</span>-----------</div>
+            <div class="cart-btns">
+                <button class="clear-cart-btn">clear cart</button>
+                <button class="cheackout-btn">checkout</button>
+            </div>
+        </div>
+
+
+        <!-- Products Section -->
+        <div class="products">
+            <h1>featured products</h1>
+            <div class="product-container">
+                <div class="product-list" id="product-list"></div>
+            </div>
+        </div>
+
+
+        <!-- Testimonial Section -->
+        <div class="testimonial">
+            <h1>Testimonial</h1>
+            <div class="testimonial-wrapper">
+                <div class="testimonial-controls">
+                    <i id="nextBtn" class="fas fa-angle-left"></i>
+                    <i id="prevBtn" class="fas fa-angle-right"></i>
+                </div>
+                <div class="testimonial-container">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="quote" id="quote">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nobis aperiam ut perspiciatis, quia quod sunt maxime iure blanditiis accusamus mollitia delectus molestias obcaecati, distinctio fugiat alias, et molestiae. Modi!</p>
+                    </div>
+                    <div class="user-profile">
+                        <img src="/images/p1.jpg" alt="" id="profile-img">
+                    </div>
+                    <div class="user-name">
+                        <span id="username">Cruszy Blink</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="testimonial-container hide">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="quote">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nobis aperiam ut perspiciatis, quia quod sunt maxime iure blanditiis accusamus mollitia delectus molestias obcaecati, distinctio fugiat alias, et molestiae. Modi!</p>
+                        </div>
+                        <div class="user-profile">
+                            <img src="/images/p1.jpg" alt="">
+                        </div>
+                        <div class="user-name">
+                            <span>Cruszy Blink</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                <div class="testimonial-container hide">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="quote">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nobis aperiam ut perspiciatis, quia quod sunt maxime iure blanditiis accusamus mollitia delectus molestias obcaecati, distinctio fugiat alias, et molestiae. Modi!</p>
+                    </div>
+                    <div class="user-profile">
+                        <img src="/images/p1.jpg" alt="">
+                    </div>
+                    <div class="user-name">
+                        <span>Jude Bellingham</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+
+        <!-- newsletter section -->
+        <div class="newsletter">
+            <div class="newsletter-text">
+                <span>Subscribe to our</span>
+                <p>Newsletter</p>
+            </div>
+            <div class="newsletter-input">
+                <input type="email" name="email" id="newsletter-input" placeholder="Enter email address">
+                <button class="submit-email-btn" type="submit">submit</button>
+            </div>
+        </div>
+
+        <!-- footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>Useful link</h4>
+                        <ul>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="#">Hair Installation</a></li>
+                            <li><a href="#">Re-vamping</a></li>
+                            <li><a href="#">Make-up</a></li>
+                            <li><a href="#">Saloon</a></li>
+                            <li><a href="#">Manicure & Pedicure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>contact us</h4>
+                        <div class="contact-icons">
+                            <div class="icons">
+                                <i class="fas fa-phone"></i>
+                                <a href="#">+237 671 234 567</a>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="#">+237 671 234 567</a>
+                            </div>
+                            <div class="icons">
+                                <i class="fas fa-envelope"></i>
+                                <a href="#">email@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="follow-links">
+                <h4>Follow us</h4>
+                <div class="link-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="address">Behind UB Junction Molyko Buea</span>
+                </div>
+                <div class="rights">
+                    <span>&copy; All rights Reserved</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/products.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
